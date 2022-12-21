@@ -5,4 +5,5 @@ Steps to scrape data from vaidam's website...
 3. Go from step1.js to step4.js
 4. Then run all other files which have names like fetchDoctorSpecializations.js and others.
 5. Run workportal server on 8080 port
-6. After running all the files run step5.js and step6.js
+6. Change the country code in step6.js
+7. After running all the files run step5.js and step6.js

@@ -107,7 +107,7 @@ async function mapDoctors(hospitalData) {
             "Parking available": "Parking",
             "Personal assistance / Concierge": "Personal Assistance",
             "Foreign currency exchange": "Money Exchange Service",
-            Pharmacy: "24X7 Pharmacy",
+            "Pharmacy": "24X7 Pharmacy",
             "International Cuisine/ Multi Cuisine": "International Cuisine",
             "Local transportation booking": "Local Transportation",
             "Private driver / Limousine services": "Private driver",
@@ -132,10 +132,14 @@ async function mapDoctors(hospitalData) {
         delete hospitalData.facilities;
         hospitalData.doctors = doctors;
         hospitalData.type = "Hospital";
-        hospitalData.country_id = 223; // Turkey ID
+        hospitalData.country_id = 217; // Thailand ID
         hospitalData.payment_methods = hospitalData ?. payment_methods.map((payment_method) => {
             return {method: payment_method};
         });
+        hospitalData.facility_amenities = hospitalData ?. facility_amenities.map((facility_amenity) => {
+            return {name: facility_amenity};
+        });
+        console.log(hospitalData.facility_amenities);
         await requestLimiter.schedule(() => {
             sendRequest(hospitalData);
         });
