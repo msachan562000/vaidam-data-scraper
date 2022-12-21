@@ -1,0 +1,21 @@
+{
+    "name": "vaidam-scraper",
+    "version": "1.0.0",
+    "description": "Data Scraper for www.vaidam.com",
+    "main": "department.js",
+    "scripts": {
+        "dev": "nodemon -w department.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Prabhsharan Singh & Ankur Bansal",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.25.0",
+        "bottleneck": "^2.19.5",
+        "lodash": "^4.17.21",
+        "mongodb": "^4.3.1",
+        "nodemon": "^2.0.15",
+        "puppeteer": "^13.1.0",
+        "shelljs": "^0.8.5"
+    }
+}
