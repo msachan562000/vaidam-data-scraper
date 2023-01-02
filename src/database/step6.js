@@ -4,6 +4,7 @@ const axios = require("axios");
 const MongoClient = require("mongodb").MongoClient;
 const Url = "mongodb://localhost:27017/Scraper";
 const apiUrl = "http://localhost:8080/api/add-facility";
+// const apiUrl = "http://work.dev.clinicspots.com/api/add-facility";
 const Bottleneck = require("bottleneck");
 const requestLimiter = new Bottleneck({maxConcurrent: 60, minTime: 1001});
 let db = null;

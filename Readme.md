@@ -7,3 +7,5 @@ Steps to scrape data from vaidam's website...
 5. Run workportal server on 8080 port
 6. Change the country code in step6.js
 7. After running all the files run step5.js and step6.js
+8. Correct the errors found in error files in mongodb and then re-run the step5.js and step6.js files after ddeleting the error files.
+9. If nothing is saving or the error is like default value for id not set then restart wampp or reinstall database.
