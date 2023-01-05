@@ -9,3 +9,4 @@ Steps to scrape data from vaidam's website...
 7. After running all the files run step5.js and step6.js
 8. Correct the errors found in error files in mongodb and then re-run the step5.js and step6.js files after ddeleting the error files.
 9. If nothing is saving or the error is like default value for id not set then restart wampp or reinstall database.
+10. command to clean clinicspotsId to null using mongo shell "db.doctorData.updateMany({}, {$set: {clinicspotsId: null}})"

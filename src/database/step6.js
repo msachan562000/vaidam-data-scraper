@@ -3,8 +3,9 @@
 const axios = require("axios");
 const MongoClient = require("mongodb").MongoClient;
 const Url = "mongodb://localhost:27017/Scraper";
-const apiUrl = "http://localhost:8080/api/add-facility";
+// const apiUrl = "http://localhost:8080/api/add-facility";
 // const apiUrl = "http://work.dev.clinicspots.com/api/add-facility";
+const apiUrl = "http://work.clinicspots.com/api/add-facility";
 const Bottleneck = require("bottleneck");
 const requestLimiter = new Bottleneck({maxConcurrent: 60, minTime: 1001});
 let db = null;
@@ -140,7 +141,6 @@ async function mapDoctors(hospitalData) {
         hospitalData.facility_amenities = hospitalData ?. facility_amenities.map((facility_amenity) => {
             return {name: facility_amenity};
         });
-        console.log(hospitalData.facility_amenities);
         await requestLimiter.schedule(() => {
             sendRequest(hospitalData);
         });
