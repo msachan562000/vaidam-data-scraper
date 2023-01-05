@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const shell = require("shelljs");
 const _ = require("lodash");
 async function doctorDataScraper(
-  doctorUrl = "https://www.vaidam.com/doctors/dr-muharrem-coskun"
+  doctorUrl = "https://www.vaidam.com/doctors/dr-radwan-elhusseini"
 ) {
   console.log("Started: doctorScraper => ", doctorUrl);
 

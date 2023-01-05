@@ -2,7 +2,7 @@ const shell = require("shelljs");
 const puppeteer = require("puppeteer");
 
 async function fetchurls(
-  listingPageUrl = "https://www.vaidam.com/hospitals/cardiology-and-cardiac-surgery/cardiac-opd-procedures/thailand"
+  listingPageUrl = "https://www.vaidam.com/hospitals/cardiology-and-cardiac-surgery/united-arab-emirates"
 ) {
   console.log("Started: listingPageUrlsScraper");
   const browser = await puppeteer.launch({

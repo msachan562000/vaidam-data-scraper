@@ -9,7 +9,7 @@ MongoClient.connect(Url, async (err, client) => {
   console.log("✅ Database Connected");
   const db = client.db("vaidam-data");
   const links = await treatmentListingPageUrls(
-    "https://www.vaidam.com/hospitals/thailand"
+    "https://www.vaidam.com/hospitals/united-arab-emirates"
   );
   const collection = db.collection("hospitalListingUrls");
   collection
