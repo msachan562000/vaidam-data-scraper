@@ -42,16 +42,19 @@ MongoClient.connect(Url, async (err, client) => {
               });
           }
         }
-        scrapedData.doctors = doctorUrls;
-        scrapedData.url = hospitalUrl;
-        await collection.insertOne(scrapedData).then(() => {
-          console.log("New Hospital added successfully in Database!!!!");
-        });
+        if (scrapedData && scrapedData.doctors)
+          scrapedData.doctors = doctorUrls;
+        if (scrapedData && scrapedData.url) scrapedData.url = hospitalUrl;
+        if (scrapedData)
+          await collection.insertOne(scrapedData).then(() => {
+            console.log("New Hospital added successfully in Database!!!!");
+          });
+        else console.log("Found error", scrapedData);
       }
     }
     if (err) console.log("ERR in database connection: ", err);
     console.log("Finished: Step3");
   } catch (err) {
-    console.log(err);
+    console.log(err, "Step3");
   }
 });

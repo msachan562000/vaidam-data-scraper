@@ -40,7 +40,7 @@ async function fetchurls(
     console.log("Task Finished!!! (listingPageUrlsScraper.js)");
     return urls;
   } catch (err) {
-    console.log(err);
+    console.log(err, "doctorListingUrlsScrapper");
   } finally {
     await browser.close();
     shell.exec("taskkill /F /IM chrome.exe"); // force kill chrome or chromium

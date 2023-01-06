@@ -127,7 +127,7 @@ async function hospitalDataScraper(
         ...facility_food,
         ...facility_transport,
       ];
-      console.log(facility_amenities);
+      // console.log(facility_amenities);
 
       let city_name = document
         .querySelector("span.secondary-heading-md")
@@ -171,7 +171,7 @@ async function hospitalDataScraper(
     console.log(hospitalData);
     return hospitalData;
   } catch (err) {
-    console.log(err);
+    console.log(err, "hospitalDataScrapper");
   } finally {
     await browser.close();
     shell.exec("taskkill /F /IM chrome.exe"); // force kill chrome or chromium
